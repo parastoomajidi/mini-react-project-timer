@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../Styles/CountDownTimer.module.css"
 import {formatTime} from "../Utils/FormatTimes";
 export const CountDownTimer= ()=>{
+
     const [timeLeft, setTimeLeft] = useState(30*60);
     useEffect(()=>{
         if(timeLeft <= 0)
@@ -21,7 +22,7 @@ export const CountDownTimer= ()=>{
                 // if time outed button muss be Gray
                 timeLeft > 0 ?(
                     <p className="{style.timer}">
-                        زمان باقیمانده :<span className={styles.time}>{formatTime(timeLeft)}</span>
+                        زمان باقیمانده :<span>{formatTime(timeLeft)}</span>
                     </p>
                 )
                  :(
